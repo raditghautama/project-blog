@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root{
+    --primary-color: rgba(251, 176, 176, 0.5);
+    --secondary-color: black;
+    --font-size-1: 52px;
+  --font-size-2: 42px;
+  --font-size-3: 22px;
+
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+/*
+html {
+    height: 1000vh;
+    max-height: 2000vh;
+} */
+
+.navbar{
+    background-color: var(--primary-color);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand{
+    font-weight: 500;
+}
+
+.login,
+.register{
+    margin-top: 100px;
+}
+
+.home{
+    margin-top: 50px;
+}
+
+.modal-header,
+.btn-simpan{
+    background-color: var(--primary-color);
+    border: var(--primary-color);
+    color: var(--secondary-color);
+}
+.btn-simpan:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-hapus{
+    background-color: var(--secondary-color);
+    border: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-hapus:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+header .header-title {
+    font-size: var(--font-size-1);
+    font-weight: 900;
+  }
+
+  header {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
