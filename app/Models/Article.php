@@ -20,6 +20,6 @@ class Article extends Model
 
     public function province()
     {
-        return $this->belongsTo(Province::class, 'provinsi_id', 'id');
+        return $this->belongsTo(Province::class, 'provinsi_id');
     }
 }

@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.sidebar')
+
 
 @section('content')
-    <section class="py-5 mt-5">
-        <div class="container">
+    <section class="mt-5">
+        <div class="">
             <div class="d-flex align-items-center justify-content-between">
                 <h4 class="mb-0 text-dark">Province</h4>
                 <button class="btn-simpan rounded-2 p-2" type="button" data-bs-toggle="modal" data-bs-target="#addModal">
@@ -90,3 +91,6 @@
         </div>
     </div>
 @endsection
+
+
+

@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.sidebar')
 
 @section('content')
-    <section class="py-5 mt-5">
+    <section class="py-5">
         <div class="container">
             <div class="d-flex align-items-center justify-content-between">
                 <h4 class="mb-0 text-dark">Artikel</h4>

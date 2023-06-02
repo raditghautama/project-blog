@@ -78,7 +78,7 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($data['name']);
+        $data['slug'] = Str::slug($data['title']);
         if (!empty($data['cover'])) {
             $data['cover'] = $request->file('cover')->store('articles', 'public');
         } else {

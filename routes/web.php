@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProvinceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -16,16 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class, 'index'])->name('home');
+Route::get('/provinsi/{slug}', [HomeController::class, 'province'])->name('artikel.provinsi');
+Route::get('/detail/{slug}', [HomeController::class, 'detail'])->name('artikel.detail');
 
 Auth::routes([
     'register'
 ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::resource('provinsi', ProvinceController::class);
-
-Route::resource('artikel', ArticleController::class);
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('provinsi', ProvinceController::class);
+    Route::resource('artikel', ArticleController::class);
+});
